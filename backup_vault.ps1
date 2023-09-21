@@ -4,12 +4,12 @@
 # Important Variables:
 $vaultAddress = $Env:VAULT_AGENT_ADDR
 $vaultToken = $Env:VAULT_TOKEN
-$kvPath = "mypath/"
+$kvPath = "mypath/" # set this to your needed kv path.
 $todaysDate = Get-Date -Format "yyyy-MM-dd"
 $backupDirectory = "C:\NETSTOCK\-Backups\vault\$todaysDate"
 $backupZipDir = "C:\NETSTOCK\-Backups\archives"
 $backupZipTarget = "${backupZipDir}/${todaysDate}.zip" 
-$gpgKeyTarget = "GPGKEYID"
+$gpgKeyTarget = "GPGKEYID" # set this to match the email or ID of your gpg key.
 
 # Compress-Directory -SourceDirectory "C:\Path\To\SourceDirectory" -OutputZipFile "C:\Path\To\Output.zip"
 function Compress-Directory {
